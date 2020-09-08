@@ -42,6 +42,18 @@ ul, li { list-style: none; }
     font-size: 14pt;
 }
 
+.question-box #timer
+{
+    color: white;
+    text-align: center;
+}
+
+.question-box #timer #count
+{
+    position: relative;
+    vertical-align: middle;
+}
+
 .question-box #question
 {
     position: relative;

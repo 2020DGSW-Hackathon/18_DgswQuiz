@@ -33,7 +33,7 @@
                 var timerID = 0;
                 timerID = setInterval(function () {
                     --count;
-                    $("#timer").html(count);
+                    $("#count").text(count);
                     if (count <= 0) {
                         clearInterval(timerID);
                         $("#timer").empty();
@@ -54,7 +54,7 @@
             <fieldset id="fieldset">
                 <legend id="legend">번째 문제</legend>
 
-                <div id="timer">30</div>
+                <div id="timer"><p id="count">30</p></div>
 
                 <p id="question">문제</p>
 
