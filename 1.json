@@ -123,19 +123,7 @@
 		},
 		{
 			"pnum": "11",
-			"problem": "(다음 c언어 연산자 중 가장 우선순위가 높은 것은?)",
-			"isOX": "false",
-			"ex1": "* (포인터)",
-			"ex2": "()",
-			"ex3": "%",
-			"ex4": ">>",
-			"answernum": "2",
-			"answer": "()",
-			"commentary": "c언어의 연산자 중 가장 높은 우선순위를 가지는 것은 괄호()이다."
-		},
-		{
-			"pnum": "12",
-			"problem": "(다음 중 and 연산자는?)",
+			"problem": "다음 중 and 연산자는?",
 			"isOX": "false",
 			"ex1": "&",
 			"ex2": "*",
@@ -145,8 +133,8 @@
 			"answer": "||",
 			"commentary": "&는 주소값을 가리키는 연산자, ||는 or 연산자이고 *는 곱셈 연산자이다."},
 {
-			"pnum": "13",
-			"problem": "(throws라는 예약어를 사용하여 한 가지의 예외만 던질 수 있다.)",
+			"pnum": "12",
+			"problem": "throws라는 예약어를 사용하여 한 가지의 예외만 던질 수 있다.",
 			"isOX": "true",
 			"ex1": "O",
 			"ex2": "X",
@@ -157,8 +145,8 @@
 			"commentary": "여러 개의 예외를 던질 수 있다."
 		},
 {
-			"pnum": "14",
-			"problem": "(10진 정수형 변수를 출력하는 데 필요한 서식 문자는?)",
+			"pnum": "13",
+			"problem": "10진 정수형 변수를 출력하는 데 필요한 서식 문자는?",
 			"isOX": "false",
 			"ex1": "%o",
 			"ex2": "%d",
@@ -169,8 +157,8 @@
 			"commentary": "%d는 정수를 출력 할때 쓰이는 서식문자이다."
 		},
 {
-			"pnum": "15",
-			"problem": "(char형 array에 \"abcde\" 값을 넣었을 때, array[5]에 있는 값은?)",
+			"pnum": "14",
+			"problem": "char형 array에 \"abcde\" 값을 넣었을 때, array[5]에 있는 값은?",
 			"isOX": "false",
 			"ex1": "a",
 			"ex2": "b",
@@ -179,6 +167,18 @@
 			"answernum": "3",
 			"answer": "/o",
 			"commentary": "문자열에서 끝부분에는 \\0이 저장된다."
+		},
+		{
+			"pnum": "15",
+			"problem": "다음 중 출력문에서 수평 탭을 입력하는 것은?",
+			"isOX": "false",
+			"ex1": "\\t",
+			"ex2": "\\n",
+			"ex3": "\\v",
+			"ex4": "\\0",
+			"answernum": "1",
+			"answer": "\\t",
+			"commentary": "\\n는 줄바꿈, \\v는 수직 탭 이동, \\0은 null 문자이다."
 		},
 		{
 			"pnum": "16",
