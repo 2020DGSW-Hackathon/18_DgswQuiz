@@ -1,0 +1,65 @@
+{
+	"plist":
+	[
+		{
+			"pnum": "1",
+			"problem": "다음 중 객체지향 언어가 아닌 것은?",
+			"isOX": "false",
+			"ex1": "c",
+			"ex2": "c#",
+			"ex3": "Java",
+			"ex4": "c++",
+			"answernum": "1",
+			"answer": "맞다",
+			"commentary": "c언어는 절차지향 언어다."
+		},
+		{
+			"pnum": "2",
+			"problem": "26을 16진수로 알맞게 변환 한것은?",
+			"isOX": "false",
+			"ex1": "3A",
+			"ex2": "2B",
+			"ex3": "1C",
+			"ex4": "1A",
+			"answernum": "4",
+			"answer": "맞다",
+			"commentary": "10진수 26를 2진수로 바꾸면 11010이고, 이진수 1010를 10진수로 바꾸면 a이다."
+		},
+{
+			"pnum": "3",
+			"problem": "stdio.h의 io의 뜻은 무엇일까?",
+			"isOX": "false",
+			"ex1": "intell/outsider",
+			"ex2": "income/outcome",
+			"ex3": "input/output",
+			"ex4": "int/otp",
+			"answernum": "3",
+			"answer": "맞다",
+			"commentary": "stdio는 standard input output의 약자이다."
+		},
+		{
+			"pnum": "4",
+			"problem": "c++ 파일의 확장자는?",
+			"isOX": "false",
+			"ex1": ".cs",
+			"ex2": ".c",
+			"ex3": ".png",
+			"ex4": ".cpp",
+			"answernum": "4",
+			"answer": "맞다",
+			"commentary": ".cs는 c#, .c는 c언어, .png는 사진의 확장자이다."
+		},
+		{
+			"pnum": "5",
+			"problem": "다음 중 or 연산자는?",
+			"isOX": "false",
+			"ex1": "*",
+			"ex2": "&&",
+			"ex3": "||",
+			"ex4": "%",
+			"answernum": "3",
+			"answer": "맞다",
+			"commentary": "논리연산자 or 은 || 이다."
+		}
+	]
+}
