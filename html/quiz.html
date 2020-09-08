@@ -7,42 +7,70 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script>
-        var r = Math.random();
-        var rnum = Math.floor(r * 20);
+        var r = 0;
+        var count = 30;
+        var timer = 0;
+        var data;
+
+        function makeQuestion() {
+            var list = data.plist[r];
+
+            document.getElementById("legend").innerHTML = list.pnum + "번째 문제";
+            document.getElementById("question").innerHTML = list.problem;
+
+            if (list.isOX == "true") {
+                $("#button-group-OX").html('<div id="group1"><button id="b1" onclick="button1_click();">O</button><button id="b2" onclick="button2_click();">X</button></div>');
+                //<button id="b1">O</button><button id="b2">X</button>
+            }
+            else {
+                $("#button-group-4choice").html('<div id="group1"><button id="b1" onclick="button1_click();">' +
+                    list.ex1 + '</button><button id="b2" onclick="button2_click();">' +
+                    list.ex2 + '</button></div><div id="group2""><button id="b3" onclick="button3_click();">' +
+                    list.ex3 + '</button><button id="b4" onclick="button4_click();">' + list.ex4 + '</button></div>');
+                //<button id="b1">O</button><button id="b2">X</button></div><div id="group2"><button id="b3">네</button><button id="b4">아니오</button>
+            }
+
+            timer = setInterval(quizTimer, 1000);
+        }
+
+        function button1_click() {
+            $("#count").empty();
+            $("#button-group-OX").empty();
+            $("#button-group-4choice").empty();
+            $("#question").html("정답입니다!");
+            clearInterval(timer);
+
+            count=2;
+            timer = setInterval(secondTimer, 1000);
+        }
+
+        function quizTimer() {
+            --count;
+            $("#count").text(count);
+            if (count <= 0) {
+                clearInterval(timer);
+                $("#count").empty();
+                $("#button-group-OX").empty();
+                $("#button-group-4choice").empty();
+                $("#question").html("시간 초과!");
+            }
+        }
+
+        function secondTimer()
+        {
+            --count;
+            if(count<=0)
+            {
+                $("#question").html("해설: "+ data.plist[r].commentary);
+                r++;
+                clearInterval(timer);
+            }
+        }
 
         $(document).ready(function () {
-            $.getJSON('../1.json', function (data) {
-                var list = data.plist[rnum];
-
-                document.getElementById("legend").innerHTML = list.pnum + "번째 문제";
-                document.getElementById("question").innerHTML = list.problem;
-
-                if (list.isOX == "true") {
-                    $("#button-group-OX").html('<div id="group1"><button id="b1">O</button><button id="b2">X</button></div>');
-                    //<button id="b1">O</button><button id="b2">X</button>
-                }
-                else {
-                    $("#button-group-4choice").html('<div id="group1"><button id="b1">' +
-                        list.ex1 + '</button><button id="b2">' + list.ex2 + '</button></div><div id="group2"><button id="b3">' +
-                        list.ex3 + '</button><button id="b4">' + list.ex4 + '</button></div>');
-                    //<button id="b1">O</button><button id="b2">X</button></div><div id="group2"><button id="b3">네</button><button id="b4">아니오</button>
-                }
-
-                var timer = $("#timer");
-                var count = 30;
-                var timerID = 0;
-                timerID = setInterval(function () {
-                    --count;
-                    $("#count").text(count);
-                    if (count <= 0) {
-                        clearInterval(timerID);
-                        $("#timer").empty();
-                        $("#button-group-OX").empty();
-                        $("#button-group-4choice").empty();
-                        $("#question").html("시간 초과!");
-                    }
-                }, 1000);
-
+            $.getJSON('../1.json', function (jsondata) {
+                data = jsondata;
+                makeQuestion();
             });
         })
     </script>
@@ -54,9 +82,10 @@
             <fieldset id="fieldset">
                 <legend id="legend">번째 문제</legend>
 
-                <div id="timer"><p id="count">30</p></div>
-
-                <p id="question">문제</p>
+                <div id="question-div">
+                    <p id="question">문제</p>
+                    <p id="count">30</p>
+                </div>
 
                 <div id="button-group-OX"></div>
 
