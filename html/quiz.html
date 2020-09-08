@@ -1,11 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/first.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function()
+        {
+            $.getJSON('../1.json', function(data)
+            {
+                document.getElementById("legend").innerHTML=data.plist[0].pnum + "번째 문제";
+                document.getElementById("question").innerHTML = data.plist[0].problem;
+            });
+        })
+    </script>
 </head>
+
 <body>
-    hjgjgjgjgjg 
+    <div class="wrapper">
+        <div class="question-box">
+            <fieldset id="fieldset">
+                <legend id="legend">번째 문제</legend>
+                <p id="question">문제</p>
+
+                <div id="button-group-OX">
+                    <div id="group1">
+                        <button id="b1">O</button>
+                        <button id="b2">X</button>
+                    </div>
+                </div>
+
+                <!--
+                <div id="button-group-4choice">
+                    <div id="group1">
+                        <button id="b1">O</button>
+                        <button id="b2">X</button>
+                    </div>
+
+                    <div id="group2">
+                        <button id="b3">네</button>
+                        <button id="b4">아니오</button>
+                    </div>
+                </div>
+                -->
+            </fieldset>
+        </div>
+    </div>
 </body>
 </html>

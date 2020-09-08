@@ -4,25 +4,14 @@
 <head>
     <link rel="stylesheet" type="text/css" href="../css/first.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <script>
-        $(document).ready(function()
-        {
-            $.getJSON('../1.json', function(data)
-            {
-                document.getElementById("question").innerHTML = data.plist[0].problem;
-            });
-        })
-    </script>
 </head>
 
 <body>
     <div class="wrapper">
         <div class="question-box">
             <fieldset id="fieldset">
-                <legend>Practice Quiz</legend>
+                <legend id="">Practice Quiz</legend>
                 <p id="question">html은 프로그래밍 언어일까요?</p>
-
 
                 <div id="button-group-OX">
                     <div id="group1">

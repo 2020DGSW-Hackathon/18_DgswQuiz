@@ -1,11 +1,9 @@
-@import url("https://doc-0c-78-docs.googleusercontent.com/docs/securesc/5p7jqb6vkc24dkesn18vhr1g6aro2vov/909ejuvjfd3hk97ukp7jbgg7sne358uq/1599543750000/15795814148517642466/15795814148517642466/16WV8rDSgjysCIdDd0HRmZJ5g4ysqgJwG?e=download&authuser=2&nonce=i66ok77pvjpau&user=15795814148517642466&hash=723glh8mml28su02vomk7m14o4p3ha6k");
-@import url("https://doc-10-78-docs.googleusercontent.com/docs/securesc/5p7jqb6vkc24dkesn18vhr1g6aro2vov/376sa6hiffiuqb2biqrjeqpploh625tb/1599543750000/15795814148517642466/15795814148517642466/1r0WpvSCl6ZKpCHwm6OLn0YzKkF1j4xUT?e=download&authuser=2");
-
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 *
 {
 	margin: 0;
 	padding: 0;
-    font-family: "210 굴림 050";
+    font-family: "nanumgothic";
     
     -ms-user-select: none; 
     -moz-user-select: -moz-none; 
@@ -85,7 +83,6 @@ ul, li
     width: 40%;
     height: 80px;
     
-    font-family: "210 굴림 030";
     font-size: 12pt;
     color: white;
 
