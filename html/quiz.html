@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="../css/first.css">
+    <link rel="stylesheet" type="text/css" href="../css/quiz.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script>
@@ -17,14 +17,31 @@
                 document.getElementById("question").innerHTML = list.problem;
 
                 if (list.isOX == "true") {
-                    $("#button-group-OX").html('<div id="group1"><button id="b1">O</button><button id="b2">X</button></div>');//<button id="b1">O</button><button id="b2">X</button>
+                    $("#button-group-OX").html('<div id="group1"><button id="b1">O</button><button id="b2">X</button></div>');
+                    //<button id="b1">O</button><button id="b2">X</button>
                 }
                 else {
                     $("#button-group-4choice").html('<div id="group1"><button id="b1">' +
                         list.ex1 + '</button><button id="b2">' + list.ex2 + '</button></div><div id="group2"><button id="b3">' +
                         list.ex3 + '</button><button id="b4">' + list.ex4 + '</button></div>');
-                        //<button id="b1">O</button><button id="b2">X</button></div><div id="group2"><button id="b3">네</button><button id="b4">아니오</button>
+                    //<button id="b1">O</button><button id="b2">X</button></div><div id="group2"><button id="b3">네</button><button id="b4">아니오</button>
                 }
+
+                var timer = $("#timer");
+                var count = 30;
+                var timerID = 0;
+                timerID = setInterval(function () {
+                    --count;
+                    $("#timer").html(count);
+                    if (count <= 0) {
+                        clearInterval(timerID);
+                        $("#timer").empty();
+                        $("#button-group-OX").empty();
+                        $("#button-group-4choice").empty();
+                        $("#question").html("시간 초과!");
+                    }
+                }, 1000);
+
             });
         })
     </script>
@@ -35,6 +52,9 @@
         <div class="question-box">
             <fieldset id="fieldset">
                 <legend id="legend">번째 문제</legend>
+
+                <div id="timer">30</div>
+
                 <p id="question">문제</p>
 
                 <div id="button-group-OX"></div>
