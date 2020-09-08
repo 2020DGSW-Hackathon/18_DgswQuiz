@@ -10,7 +10,7 @@
 			"ex3": "Java",
 			"ex4": "c++",
 			"answernum": "1",
-			"answer": "맞다",
+			"answer": "c",
 			"commentary": "c언어는 절차지향 언어다."
 		},
 		{
@@ -22,10 +22,10 @@
 			"ex3": "1C",
 			"ex4": "1A",
 			"answernum": "4",
-			"answer": "맞다",
+			"answer": "1A",
 			"commentary": "10진수 26를 2진수로 바꾸면 11010이고, 이진수 1010를 10진수로 바꾸면 a이다."
 		},
-{
+		{
 			"pnum": "3",
 			"problem": "stdio.h의 io의 뜻은 무엇일까?",
 			"isOX": "false",
@@ -34,7 +34,7 @@
 			"ex3": "input/output",
 			"ex4": "int/otp",
 			"answernum": "3",
-			"answer": "맞다",
+			"answer": "input/output",
 			"commentary": "stdio는 standard input output의 약자이다."
 		},
 		{
@@ -46,7 +46,7 @@
 			"ex3": ".png",
 			"ex4": ".cpp",
 			"answernum": "4",
-			"answer": "맞다",
+			"answer": ".cpp",
 			"commentary": ".cs는 c#, .c는 c언어, .png는 사진의 확장자이다."
 		},
 		{
@@ -58,8 +58,8 @@
 			"ex3": "||",
 			"ex4": "%",
 			"answernum": "3",
-			"answer": "맞다",
-			"commentary": "논리연산자 or 은 || 이다."
+			"answer": "||",
+			"commentary": "논리연산자 or은 || 이다."
 		}
 	]
 }
