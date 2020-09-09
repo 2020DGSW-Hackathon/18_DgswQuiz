@@ -48,19 +48,27 @@ ul, li { list-style: none; }
     text-align: center;
 }
 
-.question-box #timer #count
+.question-box #question-div
 {
     position: relative;
-    vertical-align: middle;
+    top: 35%;
+    transform: translateY(-50%);
+}
+
+.question-box #question-div p
+{
+    text-align: center;
+}
+
+.question-box #count
+{
+    position: absolute;
+    top: 50px;
+    left: 50%;
 }
 
 .question-box #question
 {
-    position: relative;
-    text-align: center;
-    top: 35%;
-    transform: translateY(-50%);
-    
     font-size: 20pt;
 }
 
@@ -107,12 +115,10 @@ ul, li { list-style: none; }
     display: flex;
     justify-content: space-around;
     margin-bottom: 40px;
-
 }
 
 .question-box #group2
 {
     display: flex;
     justify-content: space-around;
-
 }
