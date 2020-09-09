@@ -39,8 +39,16 @@ function buttonClick(exnum) {
     }
     else {
         $("#question").html("틀렸습니다!");
+        $("#life").empty();
         life--;
-        $("#life").html("남은 기회: " + life);
+        for(var j = 3-life; j>0; j--)
+        {
+            $("#life").append("<img src=\"../media/emptyheart.png\"></img>");
+        }
+        for(var i = 0; i<life; i++)
+        {
+            $("#life").append("<img src=\"../media/fillheart.png\"></img>");
+        }
     }
 
     clearInterval(timer);
@@ -66,6 +74,13 @@ function quizTimer() {
         $("#button-group-OX").empty();
         $("#button-group-4choice").empty();
         $("#question").html("시간 초과!");
+
+        $("#life").empty();
+        life--;
+        for(var i = 0; i<life; i++)
+        {
+            $("#life").append("<img src=\"../media/fillheart.png\"></img>");
+        }
 
         count = 1;
         timer = setInterval(secondTimer, 1000);
@@ -98,5 +113,10 @@ $(document).ready(function () {
         makeQuestion();
         $("#correct").html("맞은 개수: " + correctCount);
         //$("#life").html("남은 기회: " + life);
+
+        for(var i = 0; i<life; i++)
+        {
+            $("#life").append("<img src=\"../media/fillheart.png\"></img>");
+        }
     });
 })
