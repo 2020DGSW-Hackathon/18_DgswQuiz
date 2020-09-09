@@ -5,35 +5,32 @@
     <link rel="stylesheet" type="text/css" href="../css/quiz.css">
     <title>수지격품고</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../js/first.js"></script>
 </head>
 
 <body>
     <div class="wrapper">
         <div class="question-box">
             <fieldset id="fieldset">
-                <legend id="">Practice Quiz</legend>
-                <p id="question">html은 프로그래밍 언어일까요?</p>
+                <legend id="legend">Practice Quiz</legend>
+
+                <p id="answer"></p>
+
+                <div id="question-div">
+                    <p id="question">html은 프로그래밍 언어일까요?</p>
+                    <p id="count">30</p>
+                </div>
+                
+                <div id="nextButton">
+                </div>
 
                 <div id="button-group-OX">
                     <div id="group1">
-                        <button id="b1">O</button>
-                        <button id="b2">X</button>
+                        <button id="b1" onclick="buttonClick('1')">O</button>
+                        <button id="b2" onclick="buttonClick('2')">X</button>
                     </div>
                 </div>
 
-                <!--
-                <div id="button-group-4choice">
-                    <div id="group1">
-                        <button id="b1">O</button>
-                        <button id="b2">X</button>
-                    </div>
-
-                    <div id="group2">
-                        <button id="b3">네</button>
-                        <button id="b4">아니오</button>
-                    </div>
-                </div>
-                -->
             </fieldset>
         </div>
     </div>

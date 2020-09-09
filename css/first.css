@@ -63,31 +63,6 @@ ul, li { list-style: none; }
     text-align: center;
 }
 
-.question-box #count
-{
-    position: absolute;
-    top: 50px;
-    left: 50%;
-}
-
-.question-box #correct
-{
-    display: inline;
-    position: absolute;
-    top: 10%;
-    right: 20%;
-    transform: translateY(-50%);
-}
-
-.question-box #life
-{
-    display: inline;
-    position: absolute;
-    top: 10%;
-    right: 10%;
-    transform: translateY(-50%);
-}
-
 .question-box #question
 {
     opacity: 0;
@@ -125,25 +100,11 @@ ul, li { list-style: none; }
     transform: translateY(-50%);
 }
 
-.question-box #button-group-4choice
-{
-    position: relative;
-    
-    top: 70%;
-    transform: translateY(-50%);
-}
-
 .question-box #group1
 {
     display: flex;
     justify-content: space-around;
     margin-bottom: 40px;
-}
-
-.question-box #group2
-{
-    display: flex;
-    justify-content: space-around;
 }
 
 .question-box #nextButton
