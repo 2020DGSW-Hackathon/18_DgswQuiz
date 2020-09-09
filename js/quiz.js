@@ -4,6 +4,7 @@ var timer = 0;
 var data;
 var list;
 var correctCount = 0;
+var life = 3;
 
 function makeQuestion() {
     list = data.plist[r];
@@ -34,9 +35,12 @@ function buttonClick(exnum) {
     if (exnum == list.answernum) {
         $("#question").html("정답입니다!");
         correctCount++;
+        $("#correct").html("맞은 개수: " + correctCount);
     }
     else {
         $("#question").html("틀렸습니다!");
+        life--;
+        $("#life").html("남은 기회: " + life);
     }
 
     clearInterval(timer);
@@ -78,6 +82,9 @@ function secondTimer() {
         if (r == 19) {
             $("#nextButton").html("<button>퀴즈 종료</button>");
         }
+        else if (life <= 0) {
+            $("#nextButton").html("<button>퀴즈 종료</button>");
+        }
         else {
             $("#nextButton").html("<button onclick=\"nextButtonClick()\">다음 문제</button>");
         }
@@ -89,5 +96,7 @@ $(document).ready(function () {
     $.getJSON('../1.json', function (jsondata) {
         data = jsondata;
         makeQuestion();
+        $("#correct").html("맞은 개수: " + correctCount);
+        $("#life").html("남은 기회: " + life);
     });
 })

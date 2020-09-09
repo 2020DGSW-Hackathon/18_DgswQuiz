@@ -11,6 +11,7 @@
     -webkit-user-select: none; 
     -khtml-user-select: none; 
     user-select: none;
+
 }
 
 html, body {
@@ -67,6 +68,22 @@ ul, li { list-style: none; }
     position: absolute;
     top: 50px;
     left: 50%;
+}
+
+.question-box #correct
+{
+    display: inline;
+    position: absolute;
+    top: 10%;
+    right: 20%;
+}
+
+.question-box #life
+{
+    display: inline;
+    position: absolute;
+    top: 10%;
+    right: 10%;
 }
 
 .question-box #question
