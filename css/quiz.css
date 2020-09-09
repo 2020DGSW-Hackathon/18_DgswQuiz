@@ -62,6 +62,22 @@ ul, li { list-style: none; }
     text-align: center;
 }
 
+.question-box #correct
+{
+    position: absolute;
+    top: 10%;
+    right: 20%;
+    transform: translateY(-50%);
+}
+
+.question-box #life
+{
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    transform: translateY(-50%);
+}
+
 .question-box #count
 {
     position: absolute;
@@ -71,7 +87,6 @@ ul, li { list-style: none; }
 
 .question-box #question
 {
-    opacity: 0;
     font-size: 20pt;
     transition: 0.5s linear;
 }

@@ -4,6 +4,7 @@ var timer = 0;
 var data;
 var list;
 var correctCount = 0;
+var life = 3;
 
 function makeQuestion() {
     list = data.plist[r];
@@ -37,11 +38,12 @@ function buttonClick(exnum) {
         $("#question").html("정답입니다!");
         $("#question").css("opacity", "1");
         correctCount++;
+        $("#correct").html("맞은 개수: " + correctCount);
     }
     else {
+        $("#life").empty();
         $("#question").html("틀렸습니다!");
         $("#question").css("opacity", "1");
-        $("#life").empty();
         life--;
         for(var j = 3-life; j>0; j--)
         {
@@ -52,7 +54,6 @@ function buttonClick(exnum) {
             $("#life").append("<img src=\"../media/fillheart.png\"></img>");
         }
     }
-
     clearInterval(timer);
 
     count = 1;
@@ -110,9 +111,8 @@ function quizEnd()
 function secondTimer() {
     --count;
     if (count <= 0) {
-        $("#question").empty();
-        $("#answer").append("정답: " + list.answer + "<br><br>");
-        $("#question").append("해설: " + list.commentary);
+        $("#answer").html("정답: " + list.answer + "<br><br>");
+        $("#question").html("해설: " + list.commentary);
 
         if (r == 19) {
             $("#nextButton").html("<button onclick=\"quizEnd()\">퀴즈 종료</button>");
@@ -150,6 +150,5 @@ $(document).ready(function () {
     $.getJSON('../1.json', function (jsondata) {
         data = jsondata;
         newGame();
-        makeQuestion();
     });
 })
