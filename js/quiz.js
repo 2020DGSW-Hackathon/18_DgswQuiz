@@ -97,6 +97,6 @@ $(document).ready(function () {
         data = jsondata;
         makeQuestion();
         $("#correct").html("맞은 개수: " + correctCount);
-        $("#life").html("남은 기회: " + life);
+        //$("#life").html("남은 기회: " + life);
     });
 })

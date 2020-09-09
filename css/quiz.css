@@ -76,6 +76,7 @@ ul, li { list-style: none; }
     position: absolute;
     top: 10%;
     right: 20%;
+    transform: translateY(-50%);
 }
 
 .question-box #life
@@ -84,6 +85,7 @@ ul, li { list-style: none; }
     position: absolute;
     top: 10%;
     right: 10%;
+    transform: translateY(-50%);
 }
 
 .question-box #question
