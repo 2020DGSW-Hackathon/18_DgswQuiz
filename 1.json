@@ -27,7 +27,7 @@
 		},
 		{
 			"pnum": "3",
-			"problem": "stdio.h의 io의 뜻은 무엇일까?",
+			"problem": "&lt;stdio.h&gt;의 io의 뜻은 무엇일까?",
 			"isOX": "false",
 			"ex1": "intell/outsider",
 			"ex2": "income/outcome",
@@ -87,7 +87,7 @@
         },
         {
 			"pnum": "8",
-			"problem": "<string.h> 라이브러리가 포함하지 않는 함수는?",
+			"problem": "&lt;string.h&gt; 라이브러리가 포함하지 않는 함수는?",
 			"isOX": "false",
 			"ex1": "strcat()",
 			"ex2": "pow()",
@@ -129,8 +129,8 @@
 			"ex2": "*",
 			"ex3": "||",
 			"ex4": "&&",
-			"answernum": "1",
-			"answer": "||",
+			"answernum": "4",
+			"answer": "&&",
 			"commentary": "&는 주소값을 가리키는 연산자, ||는 or 연산자이고 *는 곱셈 연산자이다."},
 {
 			"pnum": "12",
@@ -162,10 +162,10 @@
 			"isOX": "false",
 			"ex1": "a",
 			"ex2": "b",
-			"ex3": "/O",
+			"ex3": "\\0",
 			"ex4": "e",
 			"answernum": "3",
-			"answer": "/o",
+			"answer": "\\0",
 			"commentary": "문자열에서 끝부분에는 \\0이 저장된다."
 		},
 		{
@@ -189,19 +189,19 @@
 			"ex3": "",
 			"ex4": "",
 			"answernum": "1",
-			"답": "맞다",
+			"answer": "O",
 			"commentary": "자바에서는 단일 상속이 가능하고 다중 상속은 불가능하다."
 		},
 		{
 			"pnum": "17",
-			"problem": "<html>css 속성을 display:inline-block으로 바꾸면 크기 조절이 가능하다.",
+			"problem": "&lt;html&gt;css 속성을 display:inline-block으로 바꾸면 크기 조절이 가능하다.",
 			"isOX": "true",
 			"ex1": "O",
 			"ex2": "X",
 			"ex3": "",
 			"ex4": "",
 			"answernum": "1",
-			"답변": "O",
+			"answer": "O",
 			"commentary": "inline-block은 inline과 block의 특징을 가져온 속성이다. block 속성의 크기 조절이 가능하다는 특징을 가져왔다."
 		},
 		{
@@ -213,7 +213,7 @@
 			"ex3": "인스턴스 변수",
 			"ex4": "클래스 변수",
 			"answernum": "1",
-			"답변": "O",
+			"answer": "지역 변수",
 			"commentary": "지역 변수는 중괄호 내에서만 유효하고 중괄호에서 나갈 시 소멸한다."
 		},
 		{
@@ -224,8 +224,8 @@
 			"ex2": "int",
 			"ex3": "long",
 			"ex4": "float",
-			"answernum": "1",
-			"답변": "O",
+			"answernum": "2",
+			"answer": "double",
 			"commentary": "double = 8 byte, int = 4byte, long = 4byte, float = 4 byte"
 		},
 		{
@@ -237,7 +237,7 @@
 			"ex3": "2147483647",
 			"ex4": "1024",
 			"answernum": "3",
-			"답변": "O",
+			"answer": "2147483647",
 			"commentary": "int는 -2147483647~2147483647 사이의 정수를 저장할 수 있다."
 		}
 	]
