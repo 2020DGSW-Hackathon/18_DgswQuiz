@@ -4,7 +4,6 @@ var timer = 0;
 var data;
 var list;
 var correctCount = 0;
-var life = 3;
 
 function makeQuestion() {
     list = data.plist[r];
@@ -38,7 +37,6 @@ function buttonClick(exnum) {
         $("#question").html("정답입니다!");
         $("#question").css("opacity", "1");
         correctCount++;
-        $("#correct").html("맞은 개수: " + correctCount);
     }
     else {
         $("#question").html("틀렸습니다!");
@@ -152,5 +150,6 @@ $(document).ready(function () {
     $.getJSON('../1.json', function (jsondata) {
         data = jsondata;
         newGame();
+        makeQuestion();
     });
 })
