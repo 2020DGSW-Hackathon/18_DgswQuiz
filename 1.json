@@ -224,7 +224,7 @@
 			"ex2": "int",
 			"ex3": "long",
 			"ex4": "float",
-			"answernum": "2",
+			"answernum": "1",
 			"answer": "double",
 			"commentary": "double = 8 byte, int = 4byte, long = 4byte, float = 4 byte"
 		},
